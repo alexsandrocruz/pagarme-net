@@ -185,6 +185,12 @@ namespace PagarMe
             get { return nsu.ToString(); }
         }
 
+        public string ReferenceKey
+        {
+            get { return GetAttribute<string>("refuse_reason"); }
+            set { SetAttribute("reference_key", value); }
+        }
+
         public int Amount
         {
             get { return GetAttribute<int>("amount"); }
